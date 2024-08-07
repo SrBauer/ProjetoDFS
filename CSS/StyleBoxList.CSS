@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#box{
+    background-color: aqua;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 300px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+#title{
+    font-size: larger;
+    margin-left: 10px;
+}
