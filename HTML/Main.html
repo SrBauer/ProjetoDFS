@@ -1,32 +1,31 @@
-<html lang="ptbr">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de mercado</title>
+    <title>Lista de Mercado</title>
     <link rel="stylesheet" href="../CSS/Style.css">
 </head>
-<header>
-    <div>
-    <div>
-        <h1>
-            Logo
-        </h1>
-    </div>
-    <div>
-        <h1>
-            Login
-        </h1>
-    </div>
-    </div>
-</header>
 <body>
+    <header>
+        <div>
+            <div>
+                <h1>Logo</h1>
+            </div>
+            <div>
+                <a href="../HTML/Login.html" id="loginButton">
+                    <button>Login</button>
+                </a>
+            </div>
+        </div>
+    </header>
     <div id="botoes">
-        <input type="text" id="produto">
-        <button id = 'bnt'>Cadastrar Produto</button>
-        <button id="limpar" >Limpar Lista</button> <!-- Novo botão -->
+        <input type="text" id="produto" placeholder="Digite o item">
+        <button id="bnt">Cadastrar Produto</button>
+        <button id="limpar">Limpar Lista</button>
     </div>
     <div>
-        <ul id = listaProdutos>
+        <ul id="listaProdutos">
         </ul>
     </div>
 
@@ -35,4 +34,4 @@
 <footer>
     <div>.</div>
 </footer>
-</html> 
+</html>

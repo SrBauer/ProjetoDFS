@@ -1,36 +1,65 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header{
+body {
+    background-color: #f1ebeb;
+    padding-top: 75px; 
+    padding-bottom: 75px;
+}
+
+header {
     width: 100%;
     height: 75px;
     background-color: rgb(0, 225, 255);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1000; 
 }
-header div{
+
+header div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
+    align-items: center; 
 }
-header div div{
+
+header div div {
     margin-top: 15px;
 }
-body{
-    background-color: #f1ebeb;
-    padding-bottom: 75px; /* Espaço para o footer */
+
+#loginButton {
+    display: inline-block; 
+    text-decoration: none; 
 }
 
-#botoes{
-margin-top: 40px;
-display: flex;
-flex-direction: row;
-justify-content: center;
+#loginButton button {
+    background-color: rgb(0, 225, 255);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-#bnt{
+#loginButton button:hover {
+    background-color: rgb(0, 200, 255);
+}
+
+#botoes {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#bnt, #limpar {
     margin-left: 10px;
     background-color: rgb(0, 225, 255);
     color: white;
@@ -38,42 +67,53 @@ justify-content: center;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-}
-#limpar {
-    margin-left: 10px;
-    background-color: rgb(0, 225, 255);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 16px;
 }
 
-#limpar:hover {
-    background-color: rgb(0, 225, 255);
+#bnt:hover, #limpar:hover {
+    background-color: rgb(0, 200, 255);
 }
 
 #listaProdutos {
     margin-top: 10px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Define 5 colunas de tamanho igual */
-    gap: 10px; /* Espaçamento entre os itens */
-    list-style-type: none; /* Remove os marcadores de lista */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 10px; 
+    list-style-type: none; 
     box-sizing: border-box;
 }
 
 #listaProdutos li {
     border-radius: 5px;
-    text-align: center; /* Centraliza o texto */
+    text-align: center; 
 }
 
+#produtolista button.remover {
+    background-color: rgb(0, 200, 255); 
+    color: white; 
+    border: none; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 14px; 
+    margin-left: 10px;
+}
 
+#produtolista button.remover:hover {
+    background-color: rgb(0, 200, 255); 
+}
 
-footer{
-background:rgb(0, 225, 255);
-width: 100%;
-height: 75px;
-position: fixed;
-bottom: 0;
-left: 0;
+#produtolista {
+    font-size: clamp(12px, 4vw, 24px);
+}
+
+footer {
+    background: rgb(0, 225, 255);
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center; 
+    line-height: 75px; 
 }
