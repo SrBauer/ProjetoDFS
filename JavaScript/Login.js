@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (usuarioEncontrado) {
             alert('Login realizado com sucesso!');
             // Redireciona para a página principal
-            window.location.href = "../HTML/Main.html"; // Substitua pelo caminho relativo correto
+            window.location.href = "../index.html"; // Substitua pelo caminho relativo correto
         } else {
             alert('E-mail ou senha incorretos.');
         }
