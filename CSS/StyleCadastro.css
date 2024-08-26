@@ -2,12 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
+    font-family: 'Arial', sans-serif; /* Tipografia moderna */
+}
+
+body {
+    background-color: #f4f7f6; /* Fundo suave */
+    padding-top: 75px; 
+    padding-bottom: 75px; 
 }
 
 header {
     width: 100%;
     height: 75px;
-    background-color: rgb(0, 225, 255);
+    background-color: #005999; /* Cor mais escura e moderna para o header */
     position: fixed; 
     top: 0;
     left: 0;
@@ -15,13 +22,12 @@ header {
     display: flex;
     align-items: center; 
     justify-content: center; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
 }
 
-body {
-    background-color: #f1ebeb;
-    padding-top: 75px; 
-    padding-bottom: 75px; 
-    font-family: Arial, sans-serif;
+header h1 {
+    color: white; /* Texto do logo em branco */
+    font-size: 24px;
 }
 
 #box {
@@ -34,57 +40,71 @@ body {
 #Cadastro {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    padding: 20px;
-    background-color: rgb(0, 225, 255);
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    background-color: white;
     border-radius: 10px; 
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    border: 1px solid #e0e0e0; /* Borda suave */
 }
 
 #Cadastro input {
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 5px; 
     font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+#Cadastro input:focus {
+    border-color: #0078D7; /* Cor de foco */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.2); /* Sombra no foco */
 }
 
 #Cadastro button {
-    background-color: rgb(0, 225, 255);
+    background-color: #0078D7;
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 10px; 
+    width: 100%; /* Largura de 100% para ocupar toda a largura do elemento pai */
+    transition: background-color 0.3s;
 }
 
 #Cadastro button:hover {
-    background-color: rgb(0, 200, 255);
+    background-color: #005999; /* Cor mais escura no hover */
 }
 
 #Link {
     text-align: center; 
-    margin-top: 10px; 
+    margin-top: 15px; 
 }
 
-#loginButton {
-    background-color: rgb(0, 225, 255);
+#loginButton, #mainButton {
+    background-color: #0078D7;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px; /* Padding ajustado para combinar com o botão "Cadastrar" */
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%; /* Largura de 100% para manter o mesmo tamanho dos botões */
+    margin: 5px 0;
+    transition: background-color 0.3s;
 }
 
-#loginButton:hover {
-    background-color: rgb(0, 200, 255);
+#loginButton:hover, #mainButton:hover {
+    background-color: #005999; /* Cor mais escura no hover */
 }
 
 footer {
-    background: rgb(0, 225, 255);
+    background: #005999;
     width: 100%;
     height: 75px;
     position: fixed;
@@ -93,4 +113,6 @@ footer {
     text-align: center; 
     line-height: 75px; 
     font-size: 18px; 
+    color: white;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
 }

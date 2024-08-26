@@ -5,33 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Mercado</title>
     <link rel="stylesheet" href="../CSS/Style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div>
-            <div>
-                <h1>Logo</h1>
-            </div>
-            <div>
-                <a href="../HTML/Login.html" id="loginButton">
-                    <button>Login</button>
-                </a>
-            </div>
+        <div class="header-content">
+            <h1>Logo</h1>
+            <a href="../HTML/Login.html" id="loginButton">
+                <button>Login</button>
+            </a>
         </div>
     </header>
-    <div id="botoes">
-        <input type="text" id="produto" placeholder="Digite o item">
-        <button id="bnt">Cadastrar Produto</button>
-        <button id="limpar">Limpar Lista</button>
-    </div>
-    <div>
-        <ul id="listaProdutos">
-        </ul>
-    </div>
-
+    <main>
+        <div id="form-container">
+            <input type="text" id="produto" placeholder="Digite o item">
+            <input type="number" id="preco" placeholder="Preço" step="0.01" min="0">
+            <input type="number" id="quantidade" placeholder="Quantidade" min="1">
+            <button id="bnt">Cadastrar Produto</button>
+            <button id="limpar">Limpar Lista</button>
+        </div>
+        <ul id="listaProdutos"></ul>
+        <div id="totalContainer">
+            <h3>Total: R$ <span id="total">0.00</span></h3>
+        </div>
+    </main>
     <script src="../JavaScript/Main.js"></script>
+    <footer>
+        <p>© 2024 Lista de Mercado. Todos os direitos reservados.</p>
+    </footer>
 </body>
-<footer>
-    <div>.</div>
-</footer>
 </html>

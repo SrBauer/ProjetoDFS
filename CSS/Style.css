@@ -2,118 +2,163 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #f1ebeb;
-    padding-top: 75px; 
-    padding-bottom: 75px;
+    background-color: #f1f1f1;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px; /* Espaço para o header fixo */
+    padding-bottom: 75px; /* Espaço para o footer */
 }
 
 header {
     width: 100%;
     height: 75px;
-    background-color: rgb(0, 225, 255);
-    position: fixed; 
+    background-color: #005999;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; 
-}
-
-header div {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    align-items: center; 
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-header div div {
-    margin-top: 15px;
+.header-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #loginButton {
-    display: inline-block; 
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 #loginButton button {
-    background-color: rgb(0, 225, 255);
+    background-color: #007acc;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 #loginButton button:hover {
-    background-color: rgb(0, 200, 255);
+    background-color: #005f99;
 }
 
-#botoes {
-    margin-top: 40px;
+main {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
-#bnt, #limpar {
-    margin-left: 10px;
-    background-color: rgb(0, 225, 255);
+#form-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#form-container input,
+#form-container button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+    min-width: 150px;
+}
+
+#form-container button {
+    background-color: #00aaff;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-#bnt:hover, #limpar:hover {
-    background-color: rgb(0, 200, 255);
+#form-container button:hover {
+    background-color: #0088cc;
 }
 
 #listaProdutos {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    gap: 10px; 
-    list-style-type: none; 
-    box-sizing: border-box;
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #listaProdutos li {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    text-align: center; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#produtolista button.remover {
-    background-color: rgb(0, 200, 255); 
-    color: white; 
-    border: none; 
-    padding: 5px 10px; 
-    border-radius: 5px; 
-    cursor: pointer; 
-    font-size: 14px; 
-    margin-left: 10px;
+.produto-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
-#produtolista button.remover:hover {
-    background-color: rgb(0, 200, 255); 
+.produto-item input[type="checkbox"] {
+    margin-right: 10px;
 }
 
-#produtolista {
-    font-size: clamp(12px, 4vw, 24px);
+.produto-item button.remover {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.produto-item button.remover:hover {
+    background-color: #cc0000;
+}
+
+#totalContainer {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
 footer {
-    background: rgb(0, 225, 255);
     width: 100%;
+    background: #005999 ;
     height: 75px;
     position: fixed;
     bottom: 0;
     left: 0;
-    text-align: center; 
-    line-height: 75px; 
+    text-align: center;
+    line-height: 75px;
+    font-weight: 500;
+    color: #fff;
 }
