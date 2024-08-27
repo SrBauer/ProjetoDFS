@@ -2,66 +2,72 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: 'Arial', sans-serif; /* Tipografia moderna */
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-    background-color: #f4f7f6; /* Fundo suave */
-    padding-top: 75px; 
-    padding-bottom: 75px; 
+    background-color: #f4f7f6;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 header {
     width: 100%;
     height: 75px;
-    background-color: #005999; /* Cor mais escura e moderna para o header */
-    position: fixed; 
+    background-color: #005999;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    color: white; /* Texto do logo em branco */
+    color: white;
     font-size: 24px;
 }
 
 #box {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 150px); 
+    width: 100%;
+    padding: 20px;
 }
 
 #Login {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     max-width: 400px;
     padding: 30px;
     background-color: white;
-    border-radius: 10px; 
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
-    border: 1px solid #e0e0e0; /* Borda suave */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
 
 #Login input {
     margin-bottom: 15px;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px; 
+    border-radius: 5px;
     font-size: 16px;
     transition: border-color 0.3s;
+    width: 100%;
 }
 
 #Login input:focus {
-    border-color: #0078D7; /* Cor de foco */
+    border-color: #0078D7;
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 120, 215, 0.2); /* Sombra no foco */
+    box-shadow: 0 0 5px rgba(0, 120, 215, 0.2);
 }
 
 #Login button {
@@ -72,35 +78,36 @@ header h1 {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 10px; 
-    width: 100%; /* Largura de 100% para ocupar toda a largura do elemento pai */
+    margin-top: 10px;
+    width: 100%;
     transition: background-color 0.3s;
 }
 
 #Login button:hover {
-    background-color: #005999; /* Cor mais escura no hover */
+    background-color: #005999;
 }
 
 #Link {
-    text-align: center; 
-    margin-top: 15px; 
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
 }
 
 #cadastrar, #mainButton {
     background-color: #0078D7;
     color: white;
     border: none;
-    padding: 12px; /* Padding ajustado para combinar com o botão "Entrar" */
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    width: 100%; /* Largura de 100% para manter o mesmo tamanho dos botões */
+    width: 100%;
     margin: 5px 0;
     transition: background-color 0.3s;
 }
 
 #cadastrar:hover, #mainButton:hover {
-    background-color: #005999; /* Cor mais escura no hover */
+    background-color: #005999;
 }
 
 footer {
@@ -110,9 +117,42 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    text-align: center; 
-    line-height: 75px; 
-    font-size: 18px; 
+    text-align: center;
+    line-height: 75px;
+    font-size: 18px;
     color: white;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Sombra para profundidade */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 768px) {
+    #box {
+        padding: 10px;
+    }
+
+    #Login {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #Login {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
 }
