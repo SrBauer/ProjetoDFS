@@ -1,3 +1,4 @@
+/* Estilos base */
 * {
     margin: 0;
     padding: 0;
@@ -116,7 +117,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 .produto-item {
@@ -164,44 +164,54 @@ footer {
     color: #fff;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    header {
-        padding: 0 10px;
-    }
+/* Botão de alternância do modo escuro */
+#toggleDarkMode {
+    position: fixed;
+    bottom: 90px; /* Alinha o botão acima do footer */
+    right: 20px; /* Espaçamento da borda direita */
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
 
-    .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+#toggleDarkMode:hover {
+    background-color: #005f99;
+}
 
-    main {
-        padding: 10px;
-    }
+/* Estilos para o modo escuro */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
 
-    #form-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
+header.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
 
-    #form-container input,
-    #form-container button {
-        width: 100%;
-        min-width: unset;
-        margin-bottom: 10px;
-    }
+#form-container.dark-mode {
+    background-color: #333333;
+    border-color: #444444;
+}
 
-    #listaProdutos li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+#form-container input.dark-mode, 
+#form-container button.dark-mode {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #666666;
+}
 
-    .produto-item {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+#listaProdutos li.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #444444;
+}
 
-    .produto-item button.remover {
-        align-self: flex-end;
-    }
+#totalContainer.dark-mode {
+    color: #ffffff;
 }

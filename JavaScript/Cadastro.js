@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var $senha = document.querySelector('#senha');
     var $confirmSenha = document.querySelector('#confirmSenha');
     var $cadastrar = document.querySelector('#cadastrar');
+    var $toggleDarkMode = document.getElementById('toggleDarkMode');
 
     // Função para cadastrar usuário
     function cadastrarUsuario() {
@@ -67,4 +68,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Adiciona o event listener ao botão de cadastro
     $cadastrar.addEventListener('click', cadastrarUsuario);
+
+    // Função para alternar o modo escuro
+    function alternarDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        document.querySelector('header').classList.toggle('dark-mode');
+        document.querySelector('footer').classList.toggle('dark-mode');
+        document.getElementById('Cadastro').classList.toggle('dark-mode');
+
+        document.querySelectorAll('#Cadastro input, #Cadastro button').forEach(function (element) {
+            element.classList.toggle('dark-mode');
+        });
+
+        // Altera o texto do botão com base no modo ativo
+        if (document.body.classList.contains('dark-mode')) {
+            $toggleDarkMode.textContent = 'Modo Claro';
+        } else {
+            $toggleDarkMode.textContent = 'Modo Escuro';
+        }
+
+        // Salva a preferência do usuário no localStorage
+        var darkModeAtivo = document.body.classList.contains('dark-mode');
+        localStorage.setItem('modoEscuroAtivo', darkModeAtivo);
+    }
+
+    // Adiciona o evento de clique ao botão de alternância de modo escuro
+    $toggleDarkMode.addEventListener('click', alternarDarkMode);
+
+    // Verifica se o usuário já ativou o modo escuro anteriormente
+    var modoEscuroAtivo = localStorage.getItem('modoEscuroAtivo') === 'true';
+    if (modoEscuroAtivo) {
+        alternarDarkMode();
+    }
 });
