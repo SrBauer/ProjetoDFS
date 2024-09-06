@@ -13,6 +13,7 @@ O que fazer para melhoria.
 •	Fazer a transição do modo escuro/claro da tela principal para a tela login e visse versa, da tela de login para a tela de cadastro está funcionando.
 •	Adicionar uma logo
 •	Adicionar categorias
+• Mudar as cores dos botões quando se muda para o modo escuro
 
 Modelo inicial do projeto
 ![image](https://github.com/user-attachments/assets/19232973-c5d0-448f-af5b-c70387d42338)
