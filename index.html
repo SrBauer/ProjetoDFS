@@ -10,17 +10,22 @@
 <body>
     <header>
         <div class="header-content">
-            <h1>Logo</h1>
+            <img src="https://cdn.icon-icons.com/icons2/1808/PNG/512/shop_115128.png" alt="Logo" id="logo">
             <a href="HTML/Login.html" id="loginButton">
                 <button>Login</button>
             </a>
         </div>
     </header>
+    
     <main>
         <div id="form-container">
             <input type="text" id="produto" placeholder="Digite o item">
             <input type="number" id="preco" placeholder="Preço" step="0.01" min="0">
-            <input type="number" id="quantidade" placeholder="Quantidade" min="1">
+            <input type="number" id="quantidade" step="0.01">
+            <select id="tipoQuantidade">
+                <option value="unidade">Unidade</option>
+                <option value="quilo">Quilo</option>
+            </select>
             <button id="bnt">Cadastrar Produto</button>
             <button id="limpar">Limpar Lista</button>
         </div>
